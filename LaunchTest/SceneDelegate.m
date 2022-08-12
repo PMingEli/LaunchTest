@@ -6,6 +6,8 @@
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
+#import "PTabBarVC.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +20,22 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+//    //创建根视图控制器
+//    ViewController* rootVC = [[ViewController alloc] init];
+//    //创建UINavigationController，将根视图控制器作为它的根视图
+//    UINavigationController* naviVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
+//    //设置window的根视图控制器为UINavigationController
+//    self.window.rootViewController = naviVC;
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    //显示Window
+//    [self.window makeKeyAndVisible];
+    
+//
+    PTabBarVC* tabbar = [PTabBarVC new];
+    _window.rootViewController = tabbar;
+    [_window makeKeyAndVisible];
+    
 }
 
 

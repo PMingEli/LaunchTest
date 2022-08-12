@@ -1,15 +1,21 @@
 //
-//  PTabBarViewController.h
+//  PTabBarVC.h
 //  LaunchTest
 //
 //  Created by 彭明均 on 2022/8/10.
 //
 
-#ifndef PTabBarViewController_h
-#define PTabBarViewController_h
+#import <UIKit/UIKit.h>
+#import "MineVC.h"
+#import "MainVC.h"
+#import "MemberVC.h"
+#import "OrderVC.h"
 
-@interface PTabBarViewController : UITabBarController
+#ifndef PTabBarVC_h
+#define PTabBarVC_h
+
+@interface PTabBarVC : UITabBarController
 
 @end
 
-#endif /* PTabBarViewController_h */
+#endif /* PTabBarVC_h */

@@ -6,3 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PRootTabItemModel.h"
+
+@implementation PRootTabItemModel
+
+@end

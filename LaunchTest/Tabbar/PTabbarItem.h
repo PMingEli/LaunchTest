@@ -6,10 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol PTabbarItem <NSObject>
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic) UIImage *image;
+@property (nonatomic) UIImage *selectedImage;
 
 @end
 

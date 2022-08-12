@@ -6,3 +6,49 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OrderVC.h"
+#import "UIColor+Hex.h"
+
+@interface OrderVC()
+
+@property UILabel* label;
+
+@end
+
+@implementation OrderVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.view.backgroundColor=[UIColor colorWithHexString:@"#dbdbdb" alpha:0.8];
+    
+    //设置视图控制器标题
+    self.title=@"订单";
+    
+    //注意通过tabBarController或者parentViewController可以得到其俯视图控制器
+    NSLog(@"%i",self.tabBarController==self.parentViewController);//对于当前应用二者相等
+    
+    //设置图标、标题(tabBarItem是显示在tabBar上的标签)
+    self.tabBarItem.title=@"课程";//注意如果这个标题不设置默认在页签上显示视图控制器标题
+    [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHexString:@"#ea4d74"],NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    self.tabBarItem.image=[[UIImage imageNamed:@"order"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];//默认图片
+    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"order_s"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];//选中图片
+    
+//    //图标右上角内容
+//    self.tabBarItem.badgeValue=@"5";
+    [self createUI];
+}
+
+- (void)createUI {
+    self.label = [[UILabel alloc] init];
+    self.label.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.label.text = @"这是课程页！";
+    self.label.backgroundColor = [UIColor clearColor];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.font = [UIFont fontWithName:@"Arial-BoldMT" size:30];
+    [self.view addSubview:self.label];
+}
+
+
+@end

@@ -30,6 +30,7 @@
 }
 
 - (void) createUI{
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.thirdLabel = [[UILabel alloc] init];
     self.thirdLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     self.thirdLabel.text = @"你来到了第三个页面！";

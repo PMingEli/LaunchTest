@@ -29,6 +29,8 @@
 }
 
 - (void) createUI{
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     self.secLabel = [[UILabel alloc] init];
     self.secLabel.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     self.secLabel.text = @"你来到了第二个页面！";
